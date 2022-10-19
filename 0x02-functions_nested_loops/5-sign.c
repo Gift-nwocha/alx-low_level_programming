@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - to be checked for
+ * print_sign - main to be checked for
  * Returns 1 and prints + if n is greater than zero
  * 0 and prints 0 if n is zero
  * -1 and prints - if n is less than zero
@@ -20,7 +20,7 @@ int print_sign(int n)
 	else
 	{
 
-		-putchar('-');
+		_putchar('-');
 		return (-1);
 	}
 }
