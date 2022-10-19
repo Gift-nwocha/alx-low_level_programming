@@ -1,1 +1,1 @@
-betty is great
+betty is fun
