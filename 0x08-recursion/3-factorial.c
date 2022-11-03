@@ -1,10 +1,15 @@
 #include "main.h"
 /**
- * fractional - returns the fractional of a given number
- * @n: the number to find the fractional of 
- *
- * Return: fractional of the number
+ * fractorial - factorial of a given number
+ * @n: pointer block of memory to fill
+ * Return: factorial
  */
 int factorial(int n)
 {
-	int resul
+	if (n == 0)
+		return (1);
+	else if (n < 0)
+		return (-1);
+	else
+		return (n * factorial(n - 1));
+}
