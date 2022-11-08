@@ -27,7 +27,7 @@ int _strlen(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *dst;
-	unsigned int i, j, size;
+	unsigned int i, j;
 
 	/*if the array is empty*/
 	if (s1 == NULL)
@@ -41,5 +41,5 @@ char *str_concat(char *s1, char *s2)
 	for (j = 0; *(s2 + j) != '\0'; j++)
 		*(dst + i) = *(s2 + j);
 	i++;
+	return (dst);
 }
-return (dst);
