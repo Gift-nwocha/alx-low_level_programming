@@ -18,28 +18,48 @@ int _strlen(char *s)
 }
 
 /**
- * str_concat - back a pointer to an array
- * @s1: array one
- * @s2: array two
- * Return: always an array dynamic
+ * _strdup - array for prints a string
+ * @str: array of elements
+ * Return: pointer
  */
 
-char *str_concat(char *s1, char *s2)
+char *_strdup(char *str)
 {
 	char *dst;
-	unsigned int i, j, size;
+	unsigned int size;
 
-	/*if the array is empty*/
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+	if (str == 0)
+	{
+		return (NULL);
+	}
+	size = _strlen(str) + 1;
+	dst = (char *) malloc(size * sizeof(char));
 
-	/*count size total*/
-	for (i = 0; *(s1 + i) != '\0'; i++)
-		*(dst + i) = *(s1 + i);
-	for (j = 0; *(s2 + j) != '\0'; j++)
-		*(dst + i) = *(s2 + j);
-	i++;
+	if (dst == 0)
+	{
+		return (NULL);
+	}
+	_strcpy(dst, str);
+	return (dst);
 }
-return (dst);
+
+/**
+ * _strcpy - copy arrays
+ * @src: array of elements
+ * @dest: dest array
+ * Return: dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+
+	return (dest);
+}
